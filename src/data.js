@@ -92,6 +92,7 @@ const computeStudentsStats = (laboratoria) => {
   promedioGeneracionesS(student);
   promedioGeneracionesM(student);
   promedioGeneracionesL(student);
+  pantallaGeneral(student);
 };
 const impresionStudents = (student) => {
   document.getElementById('pruebas').addEventListener('click', (event) => {
@@ -99,6 +100,7 @@ const impresionStudents = (student) => {
     const info = Object.values(student);
     screens.style.display = 'none';
     table.style.display = 'none';
+    generalPantalla.style.display = 'none';
     contenido.style.display = 'block';
     for (let i = 0; i < info.length; i++) {
       result += `<div class="card text-center float-left pt-2" style="width: 18rem;">
@@ -121,6 +123,7 @@ const filterStudentsLima = (student) => {
     const info = Object.values(student);
     screens.style.display = 'none';
     contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
     table.style.display = 'block';
     for (item of info) {
       let allCampus = item.campus;
@@ -141,6 +144,7 @@ const filterStudentsMexico = (student) => {
     const info = Object.values(student);
     screens.style.display = 'none';
     contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
     table.style.display = 'block';
     for (item of info) {
       let allCampus = item.campus;
@@ -161,6 +165,7 @@ const filterStudentsSantiago = (student) => {
     const info = Object.values(student);
     screens.style.display = 'none';
     contenido.style.display = 'none';
+    generalPantalla.style.display = 'none';
     table.style.display = 'block';
     for (item of info) {
       let allCampus = item.campus;
@@ -232,7 +237,9 @@ const promedioGeneracionesS = (student) => {
     }
   }
   let operacion = Math.round(resultado / 45);
+  document.getElementById('promS').innerHTML = `${operacion}%`;
   // contenido.innerHTML = operacion;
+
 };
 // falta por vicular promedio mexico
 const promedioGeneracionesM = (student) =>{
@@ -246,7 +253,9 @@ const promedioGeneracionesM = (student) =>{
     }
   }
   let operacion = Math.round(resultado / 45);
+  document.getElementById('promM').innerHTML = `${operacion}%`;
   // contenido.innerHTML = operacion;
+
 };
 // falta por vicular promedio santiago
 const promedioGeneracionesL = (student) =>{
@@ -260,5 +269,22 @@ const promedioGeneracionesL = (student) =>{
     }
   }
   let operacion = Math.round(resultado / 44);
+  document.getElementById('promL').innerHTML = `${operacion}%`;
+};
+
+
+const pantallaGeneral = (student) => {
+  document.getElementById('general').addEventListener('click', (event) => {
+    screens.style.display = 'none';
+    contenido.style.display = 'none';
+    generalPantalla.style.display = 'block';
+    table.style.display = 'none';
+    let count = 0;
+    for (key in student) {
+      count ++
+    }
+    
+    document.getElementById('contador').innerHTML = count;
+  });
   // contenido.innerHTML = operacion;
 };

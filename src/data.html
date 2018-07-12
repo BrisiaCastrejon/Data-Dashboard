@@ -19,11 +19,11 @@
                         <h3> < Laboratoria > </h3>
                     </div>
                     <ul class="list-unstyled components">
-                    <li>
-                        <a href="#"><span class="bold"> Nombre Apellido </span> <br> Puesto</a>
-                    </li>
                         <li>
                             <a href="#" id="general">General</a>
+                        </li>
+                        <li>
+                            <a href="#" id="pruebas">Alumnas</a>
                         </li>
                         <li class="active">
                             <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sedes</a>
@@ -38,9 +38,6 @@
                                     <a href="#" id="santiago">Santiago</a>
                                 </li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="#" id="pruebas">Alumnas</a>
                         </li>
                     </ul>
                 </nav>
@@ -58,7 +55,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="nav navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="#">  Buscador </a>
+                                        <a class="nav-link" href="#"> <i class="far fa-grin"></i> Nombre Apellido </a>
                                     </li>
                                 </ul>
                             </div>
@@ -67,13 +64,24 @@
                     <!-- Pantalla que se muestra al entrar-->
                     <section id= "screens" class="jumbotron">
                         <div class="row">
-                            <div class="col-12 p-3"><h4>mexico/quinta</h4></div>
+                            <div class="col-12 p-3"><h4 class="title">mexico/quinta</h4></div>
                             <div id="demo" class="col-12 col-md-6"><span><p class="size inline user p-3">15</p></span><h4 class="inline">Estudiantes <br> activas</h4></div>
                             <div class="col-12 col-md-6"><img src="img/user.svg" alt="" class="inline p-3"><h2 class="inline">Lista de estudiantes</h2></div>
-                            <div class="col-12 col-md-3 pt-5"> <h5 class="size">85%</h5><p>Progreso de la generación</p></div>
-                            <div class="col-12 col-md-3 pt-5"> <h5 class="size">15%</h5><p>Debajo del 60%</p></div>
-                            <div class="col-12 col-md-3 pt-5"> <h5 class="size">15%</h5><p>Entre 60% y 90%</p></div>
-                            <div class="col-12 col-md-3 pt-5"> <h5 class="size">15%</h5><p>Arriba del 90%</p></div>
+                            <div class="col-12 col-md-3 pt-5"> <h5 class="size per">85%</h5><p>Progreso de la generación</p></div>
+                            <div class="col-12 col-md-3 pt-5"> <h5 class="size per">15%</h5><p>Debajo del 60%</p></div>
+                            <div class="col-12 col-md-3 pt-5"> <h5 class="size per">15%</h5><p>Entre 60% y 90%</p></div>
+                            <div class="col-12 col-md-3 pt-5"> <h5 class="size per">15%</h5><p>Arriba del 90%</p></div>
+                        </div>
+                      </section>
+                      <section id= "generalPantalla" class="jumbotron none">
+                        <div class="row">
+                            <div class="col-12 p-3"><h4> < Laboratoria ></h4></div>
+                            <div id="demo" class="col-12 col-md-6"><span><p class="size inline user p-3" id="contador"></p></span><h4 class="inline">Estudiantes</h4></div>
+                            <div class="col-12 col-md-6" id="lista"><img src="img/user.svg" alt="" class="inline p-3"><h2 class="inline">Lista de estudiantes</h2></div>
+                            <div class="col-12 col-md-3 pt-5"> <p class="title">Promedio de las generaciones</p></div>
+                            <div class="col-12 col-md-3 pt-5"> <h5 class="size per" id="promL"></h5><p>Lima</p></div>
+                            <div class="col-12 col-md-3 pt-5" > <h5 class="size per" id="promM"></h5><p>México</p></div>
+                            <div class="col-12 col-md-3 pt-5" > <h5 class="size per" id="promS"></h5><p>Santiago</p></div>
                         </div>
                       </section>
                       <div class="none" id="contenido">
@@ -89,10 +97,17 @@
                             </thead>
                             <tbody id="tBody">
 
+                              
+                            </tbody>
+                          </table>
+                          
+                      </section>  
+
                             </tbody>
                           </table>
 
                       </section>
+
         </section> <!--Barra de Navegación-->
     </section><!--Prueba-->
     </main>

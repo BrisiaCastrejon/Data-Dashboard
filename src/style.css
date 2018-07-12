@@ -243,3 +243,20 @@ ul.CTAs a {
    font-size: 1.3em;
    color: #FF009E;
 }
+
+.per {
+    font-family: bitter;
+   font-size: 1.8em;
+   color: #FF009E;
+}
+
+.title {
+    font-family: bitter;
+   font-size: 1.3em;
+   color: #FF009E;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #ff1b9d21; 
+ }
